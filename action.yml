@@ -1,0 +1,67 @@
+name: Saucectl Run Action
+description: A GitHub action to run your tests on Sauce Labs.
+author: devx@saucelabs.com
+branding:
+    icon: check-circle
+    color: red
+inputs:
+  saucectl-version:
+    description: 'Version of saucectl to use. Example: v0.25.1'
+    default: latest
+    required: false
+  sauce-username:
+    description: Sauce Labs user name.
+    required: false
+  sauce-access-key:
+    description: Sauce Labs API Key.
+    required: false
+  working-directory:
+    description: Folder in which saucectl will be run.
+    default: .
+    required: false
+  config-file:
+    description: Specifies an alternative configuration file to the default .sauce/config.yml for this execution.
+    default: .sauce/config.yml
+    required: false
+  region:
+    description: Specifies the Sauce Labs data center through which tests will run. Valid values are us-west-1 or eu-central-1.
+    required: false
+  concurrency:
+    description: Controls how many suites run in parallel.
+    required: false
+  sauceignore:
+    description: Specifies the path to the .sauceignore file.
+    required: false
+  timeout:
+    description: Global timeout that limits how long saucectl can run in total.
+    required: false
+  tunnel-name:
+    description: Identifies an active Sauce Connect tunnel to use for secure connectivity to the Sauce Labs cloud.
+    required: false
+  tunnel-owner:
+    description: Identifies the Sauce Labs user who created the specified tunnel, which is required if the user running the tests did not create the tunnel.
+    required: false
+  tunnel-timeout:
+    description: How long to wait for the specified tunnel to be ready. Supports duration values like '10s', '30m' etc.
+    required: false
+  skip-run:
+    description: Skip execution of saucectl (only install binary).
+    default: "false"
+    required: false
+  select-suite:
+    description: Specifies a test suite to execute by name rather than all suites defined in the config file.
+    required: false
+  env:
+    description: Environment variables to pass to saucectl.
+    required: false
+  showConsoleLog:
+    description: Display console.log when tests succeed.
+    required: false
+    default: "false"
+  async:
+    description: Launches tests without waiting for test results.
+    required: false
+    default: "false"
+runs:
+  using: 'node24'
+  main: 'dist/main/index.js'
