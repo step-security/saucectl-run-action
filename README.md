@@ -1,6 +1,6 @@
 [![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
 
-# Saucectl Run Action from Sauce Labs
+# Saucectl Run Action from StepSecurity
 
 This action installs [saucectl](https://github.com/saucelabs/saucectl/) and launches tests. \
 You can use it to run your tests on Sauce Labs !
