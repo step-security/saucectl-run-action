@@ -1,6 +1,6 @@
 name: Saucectl Run Action
 description: A GitHub action to run your tests on Sauce Labs.
-author: devx@saucelabs.com
+author: step-security
 branding:
     icon: check-circle
     color: red
